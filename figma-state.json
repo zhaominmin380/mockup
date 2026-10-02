@@ -1,0 +1,74 @@
+{
+  "fileKey": "kfSZ7CLskTITeHUXjaER6r",
+  "url": "https://www.figma.com/design/kfSZ7CLskTITeHUXjaER6r",
+  "screens": [
+    {
+      "id": "4:77",
+      "name": "01 教師 · 今日",
+      "w": 1440,
+      "h": 960,
+      "status": "composed, pending visual review"
+    },
+    {
+      "id": "4:78",
+      "name": "02 學生 · 標籤搜尋",
+      "w": 1440,
+      "h": 960,
+      "status": "composed, pending visual review"
+    },
+    {
+      "id": "4:79",
+      "name": "03 學生 · 新增課程與顏色",
+      "w": 1440,
+      "h": 960,
+      "status": "composed, pending visual review"
+    },
+    {
+      "id": "4:80",
+      "name": "04 課程 · 月曆同步",
+      "w": 1440,
+      "h": 960,
+      "status": "composed, pending visual review"
+    },
+    {
+      "id": "4:81",
+      "name": "05 教師 · 課程紀錄",
+      "w": 1440,
+      "h": 1080,
+      "status": "blank wrapper, pending composition"
+    },
+    {
+      "id": "4:82",
+      "name": "06 家長 · 學習紀錄",
+      "w": 1440,
+      "h": 1080,
+      "status": "blank wrapper, pending composition"
+    },
+    {
+      "id": "4:83",
+      "name": "07 家長 · 手機",
+      "w": 390,
+      "h": 930,
+      "status": "blank wrapper, pending composition"
+    }
+  ],
+  "components": {
+    "primary": "5:5",
+    "secondary": "5:7",
+    "quiet": "5:9",
+    "tag-rose": "5:11",
+    "tag-sage": "5:13",
+    "tag-blue": "5:15",
+    "tag-gold": "5:17",
+    "tag-neutral": "5:19",
+    "nav": "5:21",
+    "nav-active": "5:23",
+    "input": "5:25",
+    "swatch": "5:27",
+    "leaf": "5:28",
+    "agenda": "5:31",
+    "calendar": "5:38"
+  },
+  "remainingCode": "figma-remaining.js",
+  "blocker": "Figma MCP Starter plan call limit reached; native composition refused before record/parent/mobile screens."
+}

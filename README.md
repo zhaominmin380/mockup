@@ -1,13 +1,23 @@
-# Tova UI mockup
+# Tova 手機互動預覽
 
-Interactive preview: open `index.html` in a browser. The preview uses fixture data and does not connect to the backend.
+用瀏覽器開啟 `index.html`，或從 repository 根目錄執行：
 
-Figma file: https://www.figma.com/design/kfSZ7CLskTITeHUXjaER6r
+```powershell
+python -m http.server 8765 --bind 127.0.0.1
+```
 
-The native Figma file contains composed Today, Students/tag search, Student/scheduling, and Month calendar screens. Lesson Record, Parent desktop, and Parent mobile currently have empty wrappers because the Figma MCP Starter plan call limit was reached. All views, plus an account-entry example, are available in the HTML preview.
+預覽網址：http://127.0.0.1:8765/docs/mockups/tova-ui/index.html
 
-The preview carries through the source site's Tova wordmark, leaf vector, Noto Sans TC, Sacramento, IBM Plex Mono, warm neutrals, and dusty red palette. Key interactions include subject suggestions and new tags, student colors, student-origin scheduling, calendar synchronization, editable teacher notes, confirmed summaries, and parent-visible shared snapshots.
+所有頁面都使用手機版配置；電腦上以 430px 寬呈現，手機上配合可用螢幕寬度。上方選單可切換教師今日、學生、學生詳情、月曆、課程紀錄、家長學習紀錄、家長課程安排、家長紀錄詳情及登入頁。教師與家長各有底部導覽。
 
-`figma-remaining.js` contains the pending native composition for the three remaining screens. Run it through `use_figma` against the file key in `figma-state.json` after Figma tool access becomes available. Load the figma-use, figma-generate-design, and figma-generate-library skills first. The three target wrappers must still be empty; inspect them before resuming. After composition, inspect font families and editable-layer counts, then visually review all seven screens. The native Figma screens have not received screenshot review because the quota expired.
+學生使用直向卡片與科目標籤搜尋。月曆以學生顏色點點表示每日課程，保留學生顏色圖例；點選日期會開啟小視窗，顯示當天課程的學生、時間與內容，月曆下方不再顯示詳情。小視窗可用關閉按鈕、點背景或 Escape 關閉；教師也能直接安排該日課程。仍可切換直向議程。安排課程的學生下拉選單在姓名左側顯示學生色點，可搜尋姓名或科目；選定後也在欄位內顯示色點，下方不另放顏色提示。新增學生、科目編輯、排課與分享預覽都使用全螢幕表單。
 
-The local preview was checked for JavaScript syntax and core interactions using the repository's existing JSDOM. Browser screenshot review was unavailable in this session.
+保留網站的米色、豆沙紅、Tova 手寫字標與葉片向量。Noto Sans TC、Sacramento、IBM Plex Mono 從 Google Fonts 載入；無網路時使用系統字型。
+
+日期小窗開關保留月曆 DOM 與原本捲動位置，使用短暫淡入、上移與淡出動畫。開啟前保留底部導覽列的位置與寬度，避免捲軸收起時左右位移；視窗尺寸改變時會配合手機預覽寬度。小窗內可獨立捲動，關閉後焦點回到原日期；系統開啟減少動態效果時，立即開關小窗。
+
+這是使用範例資料的互動 mockup，不連接正式 backend，重新整理後恢復初始資料。家長只顯示陳品安的課程與已分享紀錄，私人筆記和後續未分享的草稿不會帶入家長畫面。
+
+已使用現有 JSDOM 檢查頁面、底部導覽、搜尋標籤、學生選色、跨月份新增課程、月曆與議程、歷次家長紀錄、分享確認及登入。HTML、CSS、JavaScript 可由本機預覽服務載入。此工作階段無可用瀏覽器進行截圖檢查。
+
+先前 Figma 的來源與狀態檔保留供參考；手機預覽由 `index.html`、`mobile.css`、`mobile.js` 組成。
